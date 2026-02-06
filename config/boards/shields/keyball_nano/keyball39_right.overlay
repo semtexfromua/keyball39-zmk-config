@@ -2,11 +2,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/input_transform.h>
 #include "keyball39.dtsi"
 #include "keyball39_pmw3610.dtsi"
 
-/* Права половинка (central): зсув колонок у transform */
+/* Права половинка: зсув колонок */
 &default_transform {
     col-offset = <6>;
 };
@@ -30,14 +29,14 @@
         <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
-/* Трекбол: вмикаємо тільки тут */
-&spi1 { status = "okay"; };
+/* Вмикаємо трекбол (і його SPI-бас) на правій половинці */
+&spi0 { status = "okay"; };
 &trackball { status = "okay"; };
 
-/* Listener: теж тільки тут (інакше трекбол “живий”, але HID подій нема) */
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
-    /* Інверт осей (якщо треба) */
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+/* Listener тільки тут */
+ / {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
 };
