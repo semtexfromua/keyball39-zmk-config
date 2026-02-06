@@ -3,15 +3,9 @@
 
 / {
     chosen {
-        /* ВАЖЛИВО: без цього kscan часто не стартує => “ані кнопки…” */
+        /* ВАЖЛИВО: щоб матриця реально стала джерелом подій */
         zmk,kscan = &kscan0;
         zmk,physical-layout = &keyball_physical_layout;
-    };
-
-    /* Listener оголошуємо один раз. Вмикаємо тільки на правій половинці */
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
     };
 
     keyball_physical_layout: keyball_physical_layout {
@@ -20,6 +14,7 @@
         transform = <&default_transform>;
         kscan = <&kscan0>;
 
+        /* Твій список keys залишаю як є (можеш не чіпати) */
         keys =
             <&key_physical_attrs 100 100    0   38       0     0     0>
             , <&key_physical_attrs 100 100  100   13       0     0     0>
@@ -76,7 +71,7 @@
         >;
     };
 
-    /* GPIO матрицю описуємо в left/right.overlay */
+    /* GPIO матриця задається в left/right.overlay */
     kscan0: kscan {
         wakeup-source;
         diode-direction = "col2row";
