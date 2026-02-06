@@ -1,40 +1,43 @@
 /*
- * Copyright (c) 2020 ZMK Contributors
- *
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/input_transform.h>
 #include "keyball39.dtsi"
 #include "keyball39_pmw3610.dtsi"
 
+/* Права половинка (central): зсув колонок у transform */
 &default_transform {
     col-offset = <6>;
 };
 
+/* Матриця */
 &kscan0 {
-	compatible = "zmk,kscan-gpio-matrix";
-	col-gpios
-		= <&pro_micro 4 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 5 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 6 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 7 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 8 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
-		;
-	row-gpios
-		= <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		;
+    compatible = "zmk,kscan-gpio-matrix";
+
+    col-gpios =
+        <&pro_micro 4 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 5 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 6 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 7 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 8 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+
+    row-gpios =
+        <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
-&spi1 {
+/* Трекбол: вмикаємо тільки тут */
+&spi1 { status = "okay"; };
+&trackball { status = "okay"; };
+
+/* Listener: теж тільки тут (інакше трекбол “живий”, але HID подій нема) */
+&trackball_listener {
     status = "okay";
+    device = <&trackball>;
+    /* Інверт осей (якщо треба) */
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
-
-&trackball {
-    status = "okay";
-};
-
-
