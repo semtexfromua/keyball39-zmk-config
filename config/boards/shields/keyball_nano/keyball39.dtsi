@@ -3,9 +3,8 @@
 
 / {
     chosen {
-        /* ВАЖЛИВО: щоб матриця реально стала джерелом подій */
-        zmk,kscan = &kscan0;
         zmk,physical-layout = &keyball_physical_layout;
+        zmk,kscan = &kscan0;
     };
 
     keyball_physical_layout: keyball_physical_layout {
@@ -14,9 +13,8 @@
         transform = <&default_transform>;
         kscan = <&kscan0>;
 
-        /* Твій список keys залишаю як є (можеш не чіпати) */
-        keys =
-            <&key_physical_attrs 100 100    0   38       0     0     0>
+        keys
+            = <&key_physical_attrs 100 100    0   38       0     0     0>
             , <&key_physical_attrs 100 100  100   13       0     0     0>
             , <&key_physical_attrs 100 100  200    0       0     0     0>
             , <&key_physical_attrs 100 100  300   13       0     0     0>
@@ -71,9 +69,15 @@
         >;
     };
 
-    /* GPIO матриця задається в left/right.overlay */
     kscan0: kscan {
-        wakeup-source;
+        compatible = "zmk,kscan-gpio-matrix";
+
         diode-direction = "col2row";
+        row-gpios
+            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
     };
 };
