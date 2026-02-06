@@ -24,3 +24,18 @@
 		, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		;
 };
+
+&spi1 {
+    status = "okay";
+};
+
+&trackball {
+    status = "okay";
+};
+
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+  };
+};
