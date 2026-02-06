@@ -3,9 +3,8 @@
  */
 
 #include "keyball39.dtsi"
-#include "keyball39_pmw3610.dtsi"
 
-/* Ліва половинка: ТІЛЬКИ матриця. НЕ вмикаємо SPI/trackball і НЕ робимо listener. */
+/* Ліва: тільки матриця */
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
 
