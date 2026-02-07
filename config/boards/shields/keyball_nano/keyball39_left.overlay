@@ -16,8 +16,12 @@
         ;
 };
 
-/* ВАЖЛИВО:
- * keyball39_pmw3610.dtsi тут потрібен НЕ для роботи сенсора,
- * а щоб у devicetree існував label "&trackball" (бо він згадується у keymap).
- * Сам сенсор лишається disabled за замовчуванням у dtsi.
- */
+/* PMW3610 device object must exist for linker (keymap references &trackball).
+ * No physical sensor on left — driver init fails gracefully (data->ready=false). */
+&spi1 {
+    status = "okay";
+};
+
+&trackball {
+    status = "okay";
+};
