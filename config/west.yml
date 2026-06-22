@@ -21,7 +21,7 @@ manifest:
       revision: main
     - name: zmk-input-behavior-listener-custom
       remote: semtexfromua
-      revision: main
+      revision: f915f593bd63c9e8b45cb763b6c87ccd6a2aa465  # scroll-axis-lock @ 2026-06-12 (axis-locked scroll + dead-zone fix + lockout-ms)
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
