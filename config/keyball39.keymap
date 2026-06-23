@@ -247,7 +247,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
+            key-positions = <20 21>;
         };
 
         /* arrow/comparison combos: <= on X+C (чс), >= on , . (юб) —
