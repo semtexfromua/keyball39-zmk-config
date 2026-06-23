@@ -117,8 +117,8 @@
     ib_gesture_nav: ib_gesture_nav {
         compatible = "zmk,input-behavior-move-to-keypress";
         #binding-cells = <0>;
-        threshold = <600>;
-        rate-limit-ms = <250>;
+        threshold = <300>;
+        rate-limit-ms = <150>;
         reset-other-axis;
         bindings = <&kp LG(LC(RIGHT))>, <&kp LG(LC(LEFT))>, <&kp LG(W)>, <&kp LG(G)>;
     };
