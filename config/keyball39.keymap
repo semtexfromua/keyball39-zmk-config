@@ -247,7 +247,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
         };
 
         /* arrow/comparison combos: <= on X+C (чс), >= on , . (юб) —
@@ -269,10 +269,6 @@
             key-positions = <10 19>;
             timeout-ms = <40>;
             layers = <0>;
-        };
-        caps_lck {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <22 23>;
         };
     };
 
