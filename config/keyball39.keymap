@@ -240,7 +240,7 @@
             display-name = "SYM";
             bindings = <
 &kp MINUS   &kp PLUS    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ASTERISK  &kp AMPERSAND
-&caps_word  &cmb_lte    &cmb_arrow            &cmb_gte               &kp CARET    &kp PIPE         &kp SQT           &kp DOUBLE_QUOTES  &trans        &trans
+&kp PRINTSCREEN  &cmb_lte    &cmb_arrow            &cmb_gte               &kp CARET    &kp PIPE         &kp SQT           &kp DOUBLE_QUOTES  &caps_word    &kp CAPSLOCK
 &kp DOLLAR  &kp AT_SIGN &kp HASH              &kp GRAVE              &kp TILDE    &kp UNDERSCORE   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PERCENT   &kp BACKSLASH
 &trans      &trans      &trans                &trans                 &mo 1        &trans           &kp ENTER         &kp BSPC                                        &trans
             >;
