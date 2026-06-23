@@ -35,12 +35,12 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-tab$$', h: NAV}
-  - {t: '$$mdi:keyboard-space$$', h: NUM}
+  - {t: '$$mdi:keyboard-space$$', h: SYM}
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', h: SET}
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:apple-keyboard-shift$$
-  NUM:
+  SYM:
   - {t: '-', s: _}
   - +
   - (
@@ -51,21 +51,21 @@ layers:
   - {t: ']', s: '}'}
   - '*'
   - '&'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - {t: '5', s: '%'}
-  - '6'
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
+  - $$mdi:alpha-w-box$$
+  - '&cmb_lte'
+  - '&cmb_arrow'
+  - '&cmb_gte'
+  - ^
+  - '|'
+  - {t: '''', s: '"'}
+  - '"'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $
   - '@'
   - '#'
-  - '"'
-  - {t: '''', s: '"'}
+  - {t: '`', s: '~'}
+  - '~'
   - _
   - '{'
   - '}'
@@ -75,7 +75,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: NUM, type: held}
+  - {t: SYM, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -120,45 +120,45 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  CAD:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
+  NUM:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
-  - '2'
-  - {t: '3', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '4', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   MOU:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -241,26 +241,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [13, 35]
-  k: $$mdi:mouse-right-click-outline$$
-  l: [BAS]
-- p: [35, 12]
-  k: $$mdi:mouse-scroll-wheel$$
-  l: [BAS]
-- p: [16, 17, 33]
-  k: Sft+Ctl+$$mdi:keyboard-esc$$
-- p: [11, 12, 37]
-  k: Alt+Ctl+$$mdi:backspace-reverse-outline$$
-- p: [34, 26, 27]
-  k: $$mdi:alpha-w-box$$
-- p: [20, 21]
-  k: $$mdi:keyboard-esc$$
-- p: [21, 22]
-  k: '&cmb_lte'
-  l: [BAS]
-- p: [27, 28]
-  k: '&cmb_gte'
-  l: [BAS]
-- p: [10, 19]
-  k: '&cmb_arrow'
+- p: [34, 37]
+  k: NUM
   l: [BAS]
