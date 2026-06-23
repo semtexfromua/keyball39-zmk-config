@@ -253,7 +253,7 @@ combos:
   k: Alt+Ctl+$$mdi:backspace-reverse-outline$$
 - p: [34, 26, 27]
   k: $$mdi:alpha-w-box$$
-- p: [1, 2]
+- p: [0, 1]
   k: $$mdi:keyboard-esc$$
 - p: [21, 22]
   k: '&cmb_lte'
@@ -264,5 +264,3 @@ combos:
 - p: [10, 19]
   k: '&cmb_arrow'
   l: [BAS]
-- p: [22, 23]
-  k: $$mdi:apple-keyboard-caps$$
