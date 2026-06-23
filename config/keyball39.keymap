@@ -251,8 +251,8 @@
             bindings = <
 &kp PAGE_DOWN  &kp HOME      &kp END    &kp PG_UP       &kp PRINTSCREEN    &trans   &trans           &trans     &trans         &trans
 &kp LEFT_GUI   &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp C_VOLUME_UP    &trans   &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
-&kp F1         &kp F2        &kp F3     &kp F4          &kp F5             &kp F6   &kp F7           &kp F8     &kp F9         &kp F10
-&trans         &trans        &trans     &mo 2           &trans             &trans   &kp F11          &kp F12                                  &trans
+&trans         &trans        &trans     &trans          &trans             &trans   &trans           &trans     &trans         &trans
+&trans         &trans        &trans     &mo 2           &trans             &trans   &trans           &trans                                   &trans
             >;
         };
 
@@ -279,10 +279,10 @@
         SET {
             display-name = "SET";
             bindings = <
-&trans      &trans        &bootloader   &sys_reset    &trans          &trans  &sys_reset      &bootloader  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &trans  &studio_unlock  &trans       &trans  &trans
-&trans      &trans        &trans        &trans        &trans          &trans  &trans          &trans       &trans  &trans
-&trans      &trans        &trans        &trans        &trans          &trans  &trans          &trans                      &trans
+&trans      &trans        &bootloader   &sys_reset    &studio_unlock  &trans  &sys_reset  &bootloader  &trans   &trans
+&kp F2      &kp F3        &kp F4        &kp F5        &kp F7          &kp F8  &kp F9      &kp F10      &kp F11  &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &trans  &trans      &trans       &trans   &trans
+&trans      &trans        &trans        &trans        &trans          &trans  &trans      &trans                      &trans
             >;
         };
     };
