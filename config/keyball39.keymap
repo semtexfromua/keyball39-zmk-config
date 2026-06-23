@@ -64,7 +64,7 @@
     trackball_gesture_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
-        layers = <3>;
+        layers = <6>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -221,20 +221,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        /* number layer: hold Space + Backspace -> NUM (layer 3) */
-        /* hold Space + Backspace -> DEV (gestures) — combo reserved for the
-           less-frequent layer; NUM moved to Esc-hold */
-        dev_layer {
-            bindings = <&mo 6>;
-            key-positions = <34 37>;
-            timeout-ms = <55>;
-            layers = <0>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -244,7 +230,7 @@
 &kp Q                     &kp W                     &kp E                     &kp R                          &kp T        &kp Y      &kp U                            &kp I                      &kp O                       &kp P
 &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hsl LEFT_SHIFT F  &kp G        &kp H      &hsr RIGHT_SHIFT J  &hmr RCTRL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMI
 &kp Z                     &kp X                     &kp C                     &kp V                          &kp B        &kp N      &kp M                            &kp COMMA                  &kp DOT                     &kp FSLH
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT              &lt 2 TAB                 &lt 1 SPACE  &lt 3 ESC          &lt 5 RET    &bkspc_delete                                                                                      &kp RSHFT
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT              &lt 2 TAB                 &lt 1 SPACE  &lt 6 ESC          &lt 5 RET    &lt 3 BSPC                                                                                      &kp RSHFT
             >;
         };
 
