@@ -253,9 +253,14 @@ combos:
   k: Alt+Ctl+$$mdi:backspace-reverse-outline$$
 - p: [34, 26, 27]
   k: $$mdi:alpha-w-box$$
-- p: [1, 2]
+- p: [20, 21]
   k: $$mdi:keyboard-esc$$
+- p: [21, 22]
+  k: '&cmb_lte'
+  l: [BAS]
 - p: [27, 28]
-  k: {t: '''', s: '"'}
-- p: [27, 26]
-  k: '"'
+  k: '&cmb_gte'
+  l: [BAS]
+- p: [10, 19]
+  k: '&cmb_arrow'
+  l: [BAS]
