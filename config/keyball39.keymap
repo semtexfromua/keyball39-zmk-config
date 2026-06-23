@@ -275,7 +275,7 @@
         };
         arrow_combo {
             bindings = <&cmb_arrow>;
-            key-positions = <14 15>;
+            key-positions = <10 19>;
             timeout-ms = <40>;
             layers = <0>;
         };
