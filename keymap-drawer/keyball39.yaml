@@ -255,14 +255,10 @@ combos:
   k: $$mdi:alpha-w-box$$
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
-- p: [27, 28]
-  k: {t: '''', s: '"'}
-- p: [27, 26]
-  k: '"'
-- p: [2, 3]
+- p: [21, 22]
   k: '&cmb_lte'
   l: [BAS]
-- p: [6, 7]
+- p: [27, 28]
   k: '&cmb_gte'
   l: [BAS]
 - p: [10, 19]
