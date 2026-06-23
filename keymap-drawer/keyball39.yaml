@@ -36,7 +36,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-tab$$', h: NAV}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
-  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-return$$', h: SET}
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:apple-keyboard-shift$$
