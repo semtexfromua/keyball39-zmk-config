@@ -250,26 +250,17 @@
             key-positions = <1 2>;
         };
 
-        apostroph {
-            bindings = <&kp SQT>;
-            key-positions = <27 28>;
-        };
-
-        dblapostroph {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <27 26>;
-        };
-
-        /* arrow/comparison combos: left hand = less, right = greater, center = annotation */
+        /* arrow/comparison combos: <= on X+C (чс), >= on , . (юб) —
+           symmetric bottom row; -> on A+; (фж). all rare in uk+en. */
         lte_combo {
             bindings = <&cmb_lte>;
-            key-positions = <2 3>;
+            key-positions = <21 22>;
             timeout-ms = <40>;
             layers = <0>;
         };
         gte_combo {
             bindings = <&cmb_gte>;
-            key-positions = <6 7>;
+            key-positions = <27 28>;
             timeout-ms = <40>;
             layers = <0>;
         };
