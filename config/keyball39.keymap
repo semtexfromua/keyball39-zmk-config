@@ -33,19 +33,6 @@
         bindings = <&ib_toggle_layer 4>;
     };
 
-    /* input config for snipe mode */
-
-    trackball_snipe_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
-        layers = <3>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <8>;
-    };
-
     /* input config for mouse scroll mode — axis-locked (one tick = one axis) */
 
     trackball_scroll_listener {
@@ -77,7 +64,7 @@
     trackball_gesture_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
-        layers = <6>;
+        layers = <3>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
