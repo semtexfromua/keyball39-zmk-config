@@ -38,7 +38,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: SYM}
   - {t: '$$mdi:keyboard-esc$$', h: DEV}
   - {t: '$$mdi:keyboard-return$$', h: SET}
-  - {t: '$$mdi:backspace$$', h: NUM}
+  - {t: '$$mdi:backspace$$', h: NUM, s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:apple-keyboard-shift$$
   SYM:
   - {t: '-', s: _}
