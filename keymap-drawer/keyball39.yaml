@@ -51,7 +51,7 @@ layers:
   - {t: ']', s: '}'}
   - '*'
   - '&'
-  - $$mdi:alpha-w-box$$
+  - PRINTSCREEN
   - '&cmb_lte'
   - '&cmb_arrow'
   - '&cmb_gte'
@@ -59,8 +59,8 @@ layers:
   - '|'
   - {t: '''', s: '"'}
   - '"'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:alpha-w-box$$
+  - $$mdi:apple-keyboard-caps$$
   - $
   - '@'
   - '#'
