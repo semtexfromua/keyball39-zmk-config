@@ -1,0 +1,13 @@
+file_format: "1"
+id: keyball39_dongle
+name: Keyball39 Dongle
+type: shield
+url: https://github.com/Yowkees/keyball
+requires: [pro_micro]
+features:
+  - keys
+  - pointer
+siblings:
+  - keyball39_pl
+  - keyball39_pr
+  - keyball39_dongle

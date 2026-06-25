@@ -1,0 +1,27 @@
+#include "keyball39.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: kscan_mock {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+
+    /* trackball motion is relayed from the right (peripheral) half over the
+       split link into this virtual device, then handled by the keymap
+       input-behavior-listeners (which point at &vtrackball) */
+    vtrackball: virtual_input_trackball {
+        compatible = "zmk,virtual-input";
+    };
+
+    input_relay_config_trackball {
+        compatible = "zmk,split-peripheral-input-relay";
+        device = <&vtrackball>;
+        relay-channel = <111>;
+    };
+};
