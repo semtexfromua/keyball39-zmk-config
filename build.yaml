@@ -8,11 +8,11 @@ include:
     shield: keyball39_right nice_view_adapter nice_view_press_start
     snippet: studio-rpc-usb-uart
 
-  # ── Dongle (приймач = central по USB; обидві половини = peripheral) ──
+  # ── Dongle (приймач = central по USB; обидві половини = peripheral, headless) ──
   - board: nice_nano_v2
-    shield: keyball39_pl nice_view_adapter nice_view_press_start
+    shield: keyball39_pl
   - board: nice_nano_v2
-    shield: keyball39_pr nice_view_adapter nice_view_press_start
+    shield: keyball39_pr
   - board: nice_nano_v2
     shield: keyball39_dongle
     snippet: studio-rpc-usb-uart
