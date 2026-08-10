@@ -6,10 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: semtexfromua
       url-base: https://github.com/semtexfromua
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
-    - name: Ziembski
-      url-base: https://github.com/Ziembski
+    - name: kevinpastor
+      url-base: https://github.com/kevinpastor
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -24,11 +22,8 @@ manifest:
     - name: zmk-input-behavior-listener-custom
       remote: semtexfromua
       revision: f915f593bd63c9e8b45cb763b6c87ccd6a2aa465  # scroll-axis-lock @ 2026-06-12 (axis-locked scroll + dead-zone fix + lockout-ms)
-    - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
-    - name: nice-view-press-start
-      remote: Ziembski
-      revision: main
+    - name: nice-view-elemental
+      remote: kevinpastor
+      revision: 69c2ecd56b0b870ddb94b79110ef5a2152ca4a3a
   self:
     path: config

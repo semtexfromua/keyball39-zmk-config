@@ -13,10 +13,11 @@
 #
 ---
 include:
+  # Bluetooth split: right half is the central.
   - board: nice_nano_v2
-    shield: keyball39_left nice_view_adapter nice_view_press_start
+    shield: keyball39_left nice_view_adapter nice_view_elemental
+    artifact-name: keyball39_bluetooth_left
   - board: nice_nano_v2
-    shield: keyball39_right nice_view_adapter nice_view_press_start
+    shield: keyball39_right nice_view_adapter nice_view_elemental
     snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
-    shield: settings_reset
+    artifact-name: keyball39_bluetooth_right
