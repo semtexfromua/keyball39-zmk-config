@@ -3,7 +3,6 @@
  */
 
 #include "keyball39.dtsi"
-#include "keyball39_pmw3610.dtsi"
 
 &kscan0 {
     col-gpios
@@ -16,12 +15,8 @@
         ;
 };
 
-/* PMW3610 device object must exist for linker (keymap references &trackball).
- * No physical sensor on left — driver init fails gracefully (data->ready=false). */
-&spi1 {
-    status = "okay";
-};
-
-&trackball {
-    status = "okay";
+/ {
+    vtrackball: virtual_input_trackball {
+        compatible = "zmk,virtual-input";
+    };
 };
