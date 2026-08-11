@@ -10,10 +10,6 @@
 #define INPUT_REL_HWHEEL 0x06
 #endif
 
-#ifndef POINTING_DEVICE
-#define POINTING_DEVICE trackball
-#endif
-
 &lt {
     tapping-term-ms = <150>;
     quick-tap-ms = <100>;
@@ -26,7 +22,7 @@
 
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&POINTING_DEVICE>;
+        device = <&trackball>;
         layers = <0 4>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -41,7 +37,7 @@
 
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&POINTING_DEVICE>;
+        device = <&trackball>;
         layers = <3>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -54,7 +50,7 @@
 
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&POINTING_DEVICE>;
+        device = <&trackball>;
         layers = <1>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_HWHEEL>;
@@ -65,7 +61,7 @@
 
     trackball_arrow_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&POINTING_DEVICE>;
+        device = <&trackball>;
         layers = <2>; // Працює тільки на шарі 2
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;

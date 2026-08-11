@@ -1,2 +1,0 @@
-#define POINTING_DEVICE vtrackball
-#include "keyball39.keymap"

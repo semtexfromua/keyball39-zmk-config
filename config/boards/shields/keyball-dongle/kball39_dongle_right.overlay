@@ -1,7 +1,9 @@
 /* Dongle mode: right half relays its physical trackball to the receiver. */
 
 #include "../keyball_nano/keyball39.dtsi"
+#define trackball physical_trackball
 #include "../keyball_nano/keyball39_pmw3610.dtsi"
+#undef trackball
 
 &default_transform {
     col-offset = <6>;
@@ -22,18 +24,18 @@
     status = "okay";
 };
 
-&trackball {
+&physical_trackball {
     status = "okay";
 };
 
 / {
-    vtrackball: virtual_input_trackball {
+    trackball: virtual_input_trackball {
         compatible = "zmk,virtual-input";
     };
 
     input_relay_config_trackball {
         compatible = "zmk,split-peripheral-input-relay";
-        device = <&trackball>;
+        device = <&physical_trackball>;
         relay-channel = <111>;
     };
 };
